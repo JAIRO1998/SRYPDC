@@ -20,7 +20,7 @@ if ($status == 'Activado') {
         echo "<script>location.href='../gestion_aforo.php'</script>";
     } else {
     
-    $insertar = $mysqli->query("UPDATE aforo SET
+    $Update = $mysqli->query("UPDATE aforo SET
 	semaforo='$semaforo',
 	a_general='$a_gral',
     a_administrativo='$a_admin',
@@ -38,7 +38,7 @@ if ($status == 'Activado') {
     
 } else {
 
-    $insertar = $mysqli->query("UPDATE aforo SET
+    $Update = $mysqli->query("UPDATE aforo SET
 	semaforo='$semaforo',
 	a_general='$a_gral',
     a_administrativo='$a_admin',
