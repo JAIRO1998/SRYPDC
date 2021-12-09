@@ -20,7 +20,7 @@ $id_user=$_SESSION['id_usuario'];
             echo '<script>alert("Solo puede haber un aforo activo")</script>';
             echo "<script>location.href='../gestion_aforo.php'</script>";
         } else {
-            $insertar = $mysqli->query("INSERT INTO aforo ('id_aforo', 'semaforo', 'a_general', 'a_administrativo', 'a_docentes', 'a_estudiantes', 'estado', 'observaciones') VALUES ('','$semaforo', '$a_gral', '$a_admin', '$a_docentes', '$a_estudiantes', '$status', '$observaciones')");
+            $insertar = $mysqli->query("INSERT INTO aforo (aforo.id_aforo, aforo.semaforo, aforo.a_general, aforo.a_administrativo, aforo.a_docentes, aforo.a_estudiantes, aforo.estado, aforo.observaciones) VALUES ('','$semaforo', '$a_gral', '$a_admin', '$a_docentes', '$a_estudiantes', '$status', '$observaciones')");
 
             $insertar = $mysqli->query("INSERT INTO tbl_log (`id_registro`, `id_usuario`, `Modulo`, `accion`, `fecha`) VALUES ('','$id_user', 'Aforo', 'Insert', '$fecha_hora')");
 
@@ -31,12 +31,15 @@ $id_user=$_SESSION['id_usuario'];
     }
     else{
 
-    $insertar = $mysqli->query("INSERT INTO aforo ('id_aforo', 'semaforo', 'a_general', 'a_administrativo', 'a_docentes', 'a_estudiantes', 'estado', 'observaciones') VALUES ('','$semaforo', '$a_gral', '$a_admin', '$a_docentes', '$a_estudiantes', '$status', '$observaciones')");
+    $insertar = $mysqli->query("INSERT INTO aforo (aforo.id_aforo, aforo.semaforo, aforo.a_general, aforo.a_administrativo, aforo.a_docentes, aforo.a_estudiantes, aforo.estado, aforo.observaciones) VALUES ('','$semaforo', '$a_gral', '$a_admin', '$a_docentes', '$a_estudiantes', '$status', '$observaciones')");
 
     $insertar = $mysqli->query("INSERT INTO tbl_log (`id_registro`, `id_usuario`, `Modulo`, `accion`, `fecha`) VALUES ('','$id_user', 'Aforo', 'Insert', '$fecha_hora')");
 
     echo '<script>alert("Aforo dado de alta")</script>';
     echo "<script>location.href='../gestion_aforo.php'</script>";
+
+    //INSERT INTO aforo (aforo.id_aforo, aforo.semaforo, aforo.a_general, aforo.a_administrativo, aforo.a_docentes, aforo.a_estudiantes, aforo.estado, aforo.observaciones) VALUES (NULL,'$semaforo', 200, 20, 20, 20, '$status', '$observaciones')
+
 
     }
 
