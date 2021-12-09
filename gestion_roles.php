@@ -153,7 +153,7 @@ $permiso=$permisos->fetch_array();
                     ?>
                         <div class="icheck-success d-inline">
                           <input type="checkbox" id="<?php echo $datos['id_modulo']; ?>" value="<?php echo $datos['id_modulo']; ?>" name="modulo[]" checked>
-                          <label for="<?php echo $datos['id_modulo']; ?>"><?php echo $datos['modulo'] ?></label><br>
+                          <label for="<?php echo $datos['id_modulo']; ?>"><?php echo utf8_encode($datos['modulo']) ?></label><br>
                       </div>
                     <?php } 
                           else 

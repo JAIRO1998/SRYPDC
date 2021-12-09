@@ -97,7 +97,7 @@ $id_rol=$_REQUEST['id'];
                                             }
                                           }
                                         ?>>
-                                        <label for="<?php echo $datos['id_modulo']; ?>"><?php echo $datos['modulo']?></label><br>
+                                        <label for="<?php echo $datos['id_modulo']; ?>"><?php echo utf8_encode($datos['modulo'])?></label><br>
                                   </div>
                             <?php
                                 if($datos['id_modulo'] > 3 ){
