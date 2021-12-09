@@ -30,7 +30,7 @@ if ($status == 'Activado') {
     observaciones='$observaciones'
     where id_aforo='$id_aforo'");
 
-    $insertar = $mysqli->query("INSERT INTO tbl_log VALUES ('','$id_user', 'Aforo', 'update', '$fecha_hora')");
+    $insertar = $mysqli->query("INSERT INTO tbl_log (tbl_log.id_registro, tbl_log.id_usuario, tbl_log.Modulo, tbl_log.accion, tbl_log.fecha) VALUES (NULL,'$id_user', 'Aforo', 'update', '$fecha_hora')");
 
     echo '<script>alert("Datos actualizados con exito")</script>';
     echo "<script>location.href='../gestion_aforo.php'</script>";
@@ -48,7 +48,7 @@ if ($status == 'Activado') {
     observaciones='$observaciones'
     where id_aforo='$id_aforo'");
 
-    $insertar = $mysqli->query("INSERT INTO tbl_log VALUES ('','$id_user', 'Aforo', 'update', '$fecha_hora')");
+    $insertar = $mysqli->query("INSERT INTO tbl_log (tbl_log.id_registro, tbl_log.id_usuario, tbl_log.Modulo, tbl_log.accion, tbl_log.fecha) VALUES (NULL,'$id_user', 'Aforo', 'update', '$fecha_hora')");
 
     echo '<script>alert("Datos actualizados con exito")</script>';
     echo "<script>location.href='../gestion_aforo.php'</script>";
