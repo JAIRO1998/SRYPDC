@@ -83,8 +83,8 @@
                              <tr>
                                 <td><?php echo $cont?></td>
                                 <td><?php echo $datos['matricula_alum']?></td>
-                                <td><?php echo $datos['nombre']?></td>
-                                <td><?php echo $datos['carrera']?></td>
+                                <td><?php echo utf8_encode($datos['nombre'])?></td>
+                                <td><?php echo utf8_encode($datos['carrera'])?></td>
                                 <td><?php echo $datos['grado']?></td>
                                 <td><?php echo $datos['grupo']?></td>
                                 <td><?php echo $datos['fecha_registro']?></td>
@@ -130,7 +130,7 @@
                         ?>
                              <tr>
                                 <td><?php echo $cont?></td>
-                                <td><?php echo $datos['nombre'];?></td>
+                                <td><?php echo utf8_encode($datos['nombre']);?></td>
                                 <td><?php echo $datos['telefono'];?></td>
                                 <td><?php echo $datos['correo'];?></td>
                                 <td><?php echo $datos['nombre_rol'];?></td>

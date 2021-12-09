@@ -89,7 +89,7 @@ else
                         while($datos=$consulta->fetch_array())
                         {
                     ?>
-                        <label for=""><?php echo $datos['pregunta']; ?></label><br>
+                        <label for=""><?php echo utf8_encode($datos['pregunta']); ?></label><br>
                         <div class="icheck-success d-inline">
                         <input type="radio" value="SI" name="p<?php echo $cont; ?>" id="radioSuccess<?php echo $count; ?>" required>
                         <label for="radioSuccess<?php echo $count; ?>">
