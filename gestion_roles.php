@@ -78,7 +78,7 @@ $permiso=$permisos->fetch_array();
                         ?>
                              <tr>
                                 <td><?php echo $cont?></td>
-                                <td><?php echo $datos['nombre_rol']?></td>
+                                <td><?php echo utf8_encode($datos['nombre_rol'])?></td>
                                 <td><?php echo $datos['estado']?></td>
                                 <td><?php echo $datos['observaciones']?></td>
                                 <td><center><a <?php
@@ -161,7 +161,7 @@ $permiso=$permisos->fetch_array();
                     ?>
                             <div class="icheck-success d-inline">
                               <input onchange="activarradio(this)" type="checkbox" id="<?php echo $datos['id_modulo']; ?>" value="<?php echo $datos['id_modulo']; ?>" name="modulo[]">
-                              <label for="<?php echo $datos['id_modulo'];; ?>"><?php echo $datos['modulo'] ?></label><br>
+                              <label for="<?php echo $datos['id_modulo'];; ?>"><?php echo utf8_encode($datos['modulo']) ?></label><br>
                             </div>
 
                               <label>Control total</label>
