@@ -22,7 +22,7 @@ $id_user=$_SESSION['id_usuario'];
         } else {
             $insertar = $mysqli->query("INSERT INTO aforo ('id_aforo', 'semaforo', 'a_general', 'a_administrativo', 'a_docentes', 'a_estudiantes', 'estado', 'observaciones') VALUES ('','$semaforo', '$a_gral', '$a_admin', '$a_docentes', '$a_estudiantes', '$status', '$observaciones')");
 
-            $insertar = $mysqli->query("INSERT INTO tbl_log VALUES ('','$id_user', 'Aforo', 'Insert', '$fecha_hora')");
+            $insertar = $mysqli->query("INSERT INTO tbl_log (`id_registro`, `id_usuario`, `Modulo`, `accion`, `fecha`) VALUES ('','$id_user', 'Aforo', 'Insert', '$fecha_hora')");
 
             echo '<script>alert("Aforo dado de alta")</script>';
             echo "<script>location.href='../gestion_aforo.php'</script>";
@@ -33,7 +33,7 @@ $id_user=$_SESSION['id_usuario'];
 
     $insertar = $mysqli->query("INSERT INTO aforo ('id_aforo', 'semaforo', 'a_general', 'a_administrativo', 'a_docentes', 'a_estudiantes', 'estado', 'observaciones') VALUES ('','$semaforo', '$a_gral', '$a_admin', '$a_docentes', '$a_estudiantes', '$status', '$observaciones')");
 
-    $insertar = $mysqli->query("INSERT INTO tbl_log VALUES ('','$id_user', 'Aforo', 'Insert', '$fecha_hora')");
+    $insertar = $mysqli->query("INSERT INTO tbl_log (`id_registro`, `id_usuario`, `Modulo`, `accion`, `fecha`) VALUES ('','$id_user', 'Aforo', 'Insert', '$fecha_hora')");
 
     echo '<script>alert("Aforo dado de alta")</script>';
     echo "<script>location.href='../gestion_aforo.php'</script>";
