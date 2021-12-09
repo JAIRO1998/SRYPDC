@@ -16,11 +16,11 @@ $result= mysqli_num_rows($consulta);
 
 if($result <= 0)
 {
-    $insertar = $mysqli->query("INSERT INTO usuarios VALUES ('', '$nombre', '$telefono', '$correo', '$password', '$id_rol', '$status', '$observaciones')");
+    $insertar = $mysqli->query("INSERT INTO usuarios (usuarios.id_usuario, usuarios.nombre, usuarios.telefono, usuarios.correo, usuarios.password, usuarios.id_rol, usuarios.estado`, usuarios.observaciones) VALUES (NULL, '$nombre', '$telefono', '$correo', '$password', '$id_rol', '$status', '$observaciones')");
     echo "<script>location.href='usuarios.php'</script>";
     echo '<script>alert("Usuario dado de alta")</script>';
     
-$insertar = $mysqli->query("INSERT INTO tbl_log VALUES ('','$id_user', 'Usuarios', 'Insert', '$fecha_hora')");
+$insertar = $mysqli->query("INSERT INTO tbl_log (tbl_log.id_registro, tbl_log.id_usuario, tbl_log.Modulo, tbl_log.accion, tbl_log.fecha) VALUES (NULL,'$id_user', 'Usuarios', 'Insert', '$fecha_hora')");
 }
 else
 {

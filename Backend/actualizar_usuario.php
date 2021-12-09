@@ -23,7 +23,7 @@ $update = $mysqli->query("UPDATE usuarios SET
     observaciones='$observaciones'
     where id_usuario='$id_usuario'");
 
-$insertar = $mysqli->query("INSERT INTO tbl_log (tbl_log.id_registro, tbl_log.id_usuario, tbl_log.Modulo, tbl_log.accion, tbl_log.fecha) VALUES ('','$id_user', 'Usuarios', 'Update', '$fecha_hora')");
+$insertar = $mysqli->query("INSERT INTO tbl_log (tbl_log.id_registro, tbl_log.id_usuario, tbl_log.Modulo, tbl_log.accion, tbl_log.fecha) VALUES (NULL,'$id_user', 'Usuarios', 'Update', '$fecha_hora')");
 
     echo '<script>alert("Usuario actualizado con exito")</script>';
     echo "<script>location.href='usuarios.php'</script>";

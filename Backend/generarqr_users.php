@@ -22,7 +22,7 @@ else
 $contenido = $tipo_rol.'||'.$id_usuario.'||'.$fecha.'||'.$hora.'||'.$p1.'||'.$p2.'||'.$p3.'||'.$p4.'||'.$valido;
 
 
-$insertar = $mysqli->query("INSERT INTO qr VALUES ('', '$contenido', '$fecha', '$hora', '1', '$id_usuario', '$valido')");
+$insertar = $mysqli->query("INSERT INTO qr (qr.id_qr, qr.qr, qr.fecha, qr.hora, qr.estado, qr.usuario, qr.valido) VALUES (NULL, '$contenido', '$fecha', '$hora', '1', '$id_usuario', '$valido')");
 echo "<script>location.href='../mostrarqr.php'</script>";
 
 ?>

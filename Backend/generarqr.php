@@ -31,7 +31,7 @@ else
 
 $contenido = $tipo_rol.'||'.$matricula.'||'.utf8_encode($nombre).'||'.$nivel_educativo.'||'.utf8_encode($carrera).'||'.$cuatrimestre.'||'.$grupo_short[0].'||'.$fecha.'||'.$hora.'||'.$p1.'||'.$p2.'||'.$p3.'||'.$p4.'||'.$valido;
 
-$insertar = $mysqli->query("INSERT INTO qr VALUES ('', '$contenido', '$fecha', '$hora', '1', '$matricula', '$valido')");
+$insertar = $mysqli->query("INSERT INTO qr (qr.id_qr, qr.qr, qr.fecha, qr.hora, qr.estado, qr.usuario, qr.valido) VALUES (NULL, '$contenido', '$fecha', '$hora', '1', '$matricula', '$valido')");
 echo "<script>location.href='../mostrarqr.php'</script>";
 
 ?>
