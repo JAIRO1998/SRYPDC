@@ -1,12 +1,12 @@
 <?php 
 require("componentes/variables_session.php");
 $fecha = date("Y-m-d");
-/*//////////consulta de cantidades de aforo
+//////////consulta de cantidades de aforo
 $consulta_datos_aforo = $mysqli->query("SELECT * FROM aforo WHERE estado = 'Activado'");
 $datos_aforo = $consulta_datos_aforo->fetch_array();
 
 /////////////consulta de cantidades de usuarios y alumnos
-$consulta_cant_estudiantes = $mysqli->query("SELECT COUNT(*) AS cant_estudent FROM `historial_alumnos` WHERE DATE(fecha_escaneo) = DATE('$fecha') and acceso = 1");
+$consulta_cant_estudiantes = $mysqli->query("SELECT COUNT(*) AS cant_estudent FROM historial_alumnos WHERE DATE(fecha_escaneo) = DATE('$fecha') and acceso = 1");
 $cant_estudent = $consulta_cant_estudiantes->fetch_array();
 
 $consulta_cant_docentes = $mysqli->query("SELECT COUNT(*) AS cant_docentes FROM historial_users INNER JOIN usuarios ON usuarios.id_usuario=historial_users.id_usuario INNER JOIN roleS ON roles.id_rol= usuarios.id_rol WHERE roles.nombre_rol='Docentes' and DATE(fecha_escaneo) = DATE('$fecha') and acceso = 1");
@@ -17,7 +17,7 @@ $consulta_cant_admin = $mysqli->query("SELECT COUNT(*) AS cant_admin FROM histor
 $cant_admin = $consulta_cant_admin->fetch_array();
 
 $cant_gral = $cant_estudent['cant_estudent'] + $cant_docentes['cant_docentes'] + $cant_admin['cant_admin'];
-*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
