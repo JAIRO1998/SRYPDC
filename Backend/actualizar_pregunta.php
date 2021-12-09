@@ -14,7 +14,7 @@ $insertar = $mysqli->query("UPDATE preguntas SET
     descripcion='$descripcion'
     where id_pregunta='$id_pregunta'");
 
-$insertar = $mysqli->query("INSERT INTO tbl_log VALUES ('','$id_user', 'Preguntas', 'update', '$fecha_hora')");
+$insertar = $mysqli->query("INSERT INTO tbl_log (tbl_log.id_registro, tbl_log.id_usuario, tbl_log.Modulo, tbl_log.accion, tbl_log.fecha) VALUES (NULL,'$id_user', 'Preguntas', 'update', '$fecha_hora')");
 
     echo '<script>alert("Pregunta actualizada con exito")</script>';
     echo "<script>location.href='../preguntas.php'</script>";
